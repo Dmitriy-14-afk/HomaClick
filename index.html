@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Хома</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <div class="text" id="clicks">Хомячков:0</div>
+    <button id="clickButton"><img src="img/photo_2024-07-06_22-24-52.png" alt="" height="200" width="200"></button>
+    
+    <script>
+        // Получаем элементы из DOM
+        var clicksElement = document.getElementById('clicks');
+        var clickButton = document.getElementById('clickButton');
+        
+        // Устанавливаем начальное количество кликов
+        var clickCount = 0;
+        clicksElement.textContent = 'Хомячков: ' + clickCount;
+        
+        // Добавляем обработчик события клика на кнопку
+        clickButton.addEventListener('click', function() {
+            clickCount++;
+            clicksElement.textContent = 'Хомячков: ' + clickCount;
+        });
+    </script>
+</body>
+</html>
